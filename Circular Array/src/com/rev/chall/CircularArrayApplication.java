@@ -11,7 +11,7 @@ public class CircularArrayApplication {
 		 CircularArrayImpl<String> genericObj = 
 	        		new CircularArrayImpl<String>();
 		
-        String[] strArray = {"food","balls","drinks"};
+        String[] strArray = {"food","balls","drinks","bags","cones"};
         Integer[] intArray = {5,6,7};		
         
         //List<Integer> intArray = 
@@ -26,8 +26,8 @@ public class CircularArrayApplication {
         
       
       
-      genericObj.rotateThroughCharacters(strArray);
-      genericObj.showDetails(strArray);
+      genericObj.rotateThroughCharacters(strArray, 5, 1);
+      //genericObj.showDetails(strArray);
       //genericObj.rotateThroughCharacters(intArray);
 	}
 	

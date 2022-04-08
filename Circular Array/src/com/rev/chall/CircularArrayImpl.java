@@ -18,23 +18,34 @@ public class CircularArrayImpl<T> {
 	    item.getClass().getName());
 	}
 
-	public void rotateThroughCharacters(T[] item) {
+	public void rotateThroughCharacters(T[] item, int n, int indx) {
 
 	  int accumulator = 0; 
 	  
-	  System.out.print("Here is the circular rotation of items: ");
-
-	  for (int i = 0; i < item.length; i++) {
+	  T[] item2 = (T[]) new String[(n * 2)];
 	  
-	  System.out.print(item[i] 
-			  + "\r\n");
+	  //System.out.print("Here is the circular rotation of items: ");
+
+	  for (int i = 0; i < n; i++) {
+		  
+		  item2[i] = item2[n + i] = item[i];
+	  
+	 // System.out.print(item[i] 
+	//		  + "\r\n");
 
 	  //accumulator++;
 
 	  }
+	  
+for (int i = indx; i < n + indx; i++) {
+		  
+	System.out.print(item2[i] + " ");
+	  
+	
+	  }
 
 	    //accumulator++;
-	  System.out.print(item[accumulator] + "\r\n");
+	  //System.out.print(item[accumulator] + "\r\n");
 	    //return item[accumulator];
 
 	 }
